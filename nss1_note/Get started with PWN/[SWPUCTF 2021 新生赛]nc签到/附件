@@ -1,0 +1,33 @@
+import os
+
+art = '''
+
+   ((  "####@@!!$$    ))
+       `#####@@!$$`  ))
+    ((  '####@!!$:
+   ((  ,####@!!$:   ))
+       .###@!!$:
+       `##@@!$:
+        `#@!!$
+  !@#    `#@!$:       @#$
+   #$     `#@!$:       !@!
+            '@!$:
+        '`\   "!$: /`'
+           '\  '!: /'
+             "\ : /"
+  -."-/\\\-."//.-"/:`\."-.JrS"."-=_\\
+" -."-.\\"-."//.-".`-."_\\-.".-\".-//'''
+print(art)
+print("My_shell_ProVersion")
+
+blacklist = ['cat','ls',' ','cd','echo','<','${IFS}']
+
+while True:
+    command = input()
+    for i in blacklist:
+        if i in command:
+            exit(0)
+    os.system(command)
+
+
+
